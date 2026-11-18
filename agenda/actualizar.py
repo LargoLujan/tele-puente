@@ -8,7 +8,9 @@ Siempre deja el fichero de hoy, aunque una fuente no conteste o no haya nada: as
 Si una fuente falla a media jornada, se conserva lo que ya se había leído hoy. Lo lanza GitHub Actions cada hora.
 Uso: python agenda/actualizar.py
 """
+import hashlib
 import html
+import io
 import json
 import re
 import urllib.parse
@@ -19,6 +21,9 @@ from zoneinfo import ZoneInfo
 
 DIAS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 SALIDA = Path(__file__).resolve().parent / "hoy.json"
+# La tele no llega a www.zaragoza.es: las fotos se guardan aquí en pequeño (la app las pixela igual) y se sirven desde Pages
+FOTOS = Path(__file__).resolve().parent / "fotos"
+FOTOS_WEB = "https://largolujan.github.io/tele-puente/agenda/fotos/"
 ESPERA = 30  # segundos por petición
 AYUNTAMIENTO, TEATRO = "Ayuntamiento de Zaragoza", "Teatro Principal"
 
@@ -96,6 +101,27 @@ def teatro_principal(hoy):
     return eventos
 
 
+def foto_local(url):
+    """Copia pequeña (132×88) de la foto de un acto; '' si no se puede (la app pinta entonces un dibujo)."""
+    if not url or url.startswith(FOTOS_WEB):
+        return url or ""
+    nombre = hashlib.sha1(url.encode("utf-8")).hexdigest()[:16] + ".jpg"
+    destino = FOTOS / nombre
+    if not destino.exists():
+        try:
+            from PIL import Image, ImageOps
+            peticion = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (tele-puente; agenda)"})
+            with urllib.request.urlopen(peticion, timeout=15) as respuesta:
+                datos = respuesta.read(4_000_000)
+            imagen = ImageOps.fit(Image.open(io.BytesIO(datos)).convert("RGB"), (132, 88), Image.LANCZOS)
+            FOTOS.mkdir(exist_ok=True)
+            imagen.save(destino, quality=82, optimize=True)
+        except Exception as error:
+            print(f"Foto sin copiar ({type(error).__name__}): {url[:80]}")
+            return ""
+    return FOTOS_WEB + nombre
+
+
 def main():
     hoy = datetime.now(ZoneInfo("Europe/Madrid"))
     fecha = hoy.strftime("%Y-%m-%d")
@@ -126,8 +152,16 @@ def main():
             vistos.add(clave)
             unicos.append(e)
     unicos.sort(key=lambda x: (not x["solo_hoy"], not x["destacado"], x["hora"]))
+    unicos = unicos[:40]
+    for e in unicos:
+        e["imagen"] = foto_local(e["imagen"])
+    # fuera las fotos de otros días
+    usadas = {e["imagen"].rsplit("/", 1)[-1] for e in unicos if e["imagen"]}
+    for f in FOTOS.glob("*.*") if FOTOS.exists() else []:
+        if f.name not in usadas:
+            f.unlink()
     SALIDA.write_text(json.dumps({"fecha": fecha, "generado": hoy.strftime("%Y-%m-%d %H:%M"), "fuentes": fuentes,
-                                  "eventos": unicos[:40]}, ensure_ascii=False, indent=1), encoding="utf-8")
+                                  "eventos": unicos}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(unicos)} actos para el {hoy:%d-%m-%Y} · {fuentes}")
 
 
