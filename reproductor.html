@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reproductor</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #reproductor { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="reproductor"></div>
+<script>
+  // Puente entre una app de tele (que no tiene dirección web y por eso YouTube no la deja reproducir: error 153)
+  // y el reproductor oficial de YouTube. La app mete esta página en un iframe y le habla con postMessage.
+  //
+  // Órdenes que recibe: {orden: "poner", id} | {orden: "poner", lista, indice} | {orden: "poner", ids, indice}
+  //   {orden: "ver-lista", lista}  (prepara la lista sin reproducirla, para saber qué vídeos tiene)
+  //   {orden: "play"} | {orden: "pausa"} | {orden: "parar"} | {orden: "siguiente"} | {orden: "anterior"}
+  //   {orden: "saltar", seg} | {orden: "volumen", v} | {orden: "silencio", si}
+  // Lo que cuenta a la app: {puente: "listo"} | {puente: "estado", estado, id, titulo, tiempo, duracion, indice}
+  //   {puente: "lista", lista, ids} | {puente: "error", codigo}
+  var rep = null, listo = false, pendientes = [], esperandoLista = null;
+
+  function contar(mensaje) {
+    mensaje.puente = mensaje.puente || "estado";
+    window.parent.postMessage(JSON.stringify(mensaje), "*");
+  }
+  function estado(e) {
+    var d = rep.getVideoData ? rep.getVideoData() : {};
+    contar({ puente: "estado", estado: e, id: d.video_id || "", titulo: d.title || "", tiempo: rep.getCurrentTime ? rep.getCurrentTime() : 0,
+      duracion: rep.getDuration ? rep.getDuration() : 0, indice: rep.getPlaylistIndex ? rep.getPlaylistIndex() : -1 });
+  }
+
+  function onYouTubeIframeAPIReady() {
+    rep = new YT.Player("reproductor", {
+      width: "100%", height: "100%",
+      playerVars: { autoplay: 1, controls: 0, disablekb: 1, fs: 0, iv_load_policy: 3, rel: 0, playsinline: 1, hl: "es", cc_load_policy: 0 },
+      events: {
+        onReady: function () { listo = true; contar({ puente: "listo" }); pendientes.splice(0).forEach(atender); },
+        onStateChange: function (e) {
+          // al preparar una lista sin reproducirla, en cuanto se conoce se cuenta qué vídeos tiene
+          if (esperandoLista && rep.getPlaylist && rep.getPlaylist()) {
+            contar({ puente: "lista", lista: esperandoLista, ids: rep.getPlaylist() });
+            esperandoLista = null;
+          }
+          estado(e.data);
+        },
+        onError: function (e) { contar({ puente: "error", codigo: e.data }); }
+      }
+    });
+  }
+
+  function atender(m) {
+    if (!listo) { pendientes.push(m); return; }
+    if (m.orden === "poner") {
+      if (m.lista) rep.loadPlaylist({ list: m.lista, listType: "playlist", index: m.indice || 0 });
+      else if (m.ids) rep.loadPlaylist(m.ids, m.indice || 0);
+      else if (m.id) rep.loadVideoById(m.id);
+    } else if (m.orden === "ver-lista") {
+      esperandoLista = m.lista;
+      rep.cuePlaylist({ list: m.lista, listType: "playlist" });
+    } else if (m.orden === "play") rep.playVideo();
+    else if (m.orden === "pausa") rep.pauseVideo();
+    else if (m.orden === "parar") rep.stopVideo();
+    else if (m.orden === "siguiente") rep.nextVideo();
+    else if (m.orden === "anterior") rep.previousVideo();
+    else if (m.orden === "saltar") rep.seekTo(Math.max(0, rep.getCurrentTime() + (m.seg || 0)), true);
+    else if (m.orden === "volumen") rep.setVolume(m.v);
+    else if (m.orden === "silencio") { if (m.si) rep.mute(); else rep.unMute(); }
+  }
+
+  window.addEventListener("message", function (ev) {
+    var m;
+    try { m = typeof ev.data === "string" ? JSON.parse(ev.data) : ev.data; } catch (e) { return; }
+    if (m && m.orden) atender(m);
+  });
+  // mientras suena, cada segundo cuenta por dónde va
+  setInterval(function () { if (listo && rep.getPlayerState && rep.getPlayerState() === 1) estado(1); }, 1000);
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
