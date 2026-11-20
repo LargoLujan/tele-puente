@@ -1,6 +1,6 @@
 {
  "fecha": "2026-11-20",
- "generado": "2026-11-20 13:43",
+ "generado": "2026-11-20 22:00",
  "fuentes": {
   "Ayuntamiento de Zaragoza": 26,
   "Teatro Principal": 1
@@ -55,7 +55,7 @@
    "infantil": false
   },
   {
-   "titulo": "CUENTACUENTOS Y TALLER ¿Fu y el mundo detrás del cristal¿ por Xenia Pigem",
+   "titulo": "CUENTACUENTOS Y TALLER \"Fu y el mundo detrás del cristal\" por Xenia Pigem",
    "hora": "18:00",
    "lugar": "Biblioteca Pública Benjamín Jarnés (Actur-Rey Fernando)",
    "direccion": "C/ Pedro Laín Entralgo,15 (Esquina Gómez de Avellaneda)",
@@ -135,22 +135,6 @@
    "infantil": false
   },
   {
-   "titulo": "Imaginarios O-cultos: Creación escénica sobre narración oral, lengua de signos y dramaturgias visuales.Pares sueltos",
-   "hora": "18:00",
-   "lugar": "Centro Cívico Rio Ebro. Edificio Fernández Ordoñez",
-   "direccion": "C/ María Zambrano, 56",
-   "barrio": "Junta Municipal Actur - Rey Fernando",
-   "transporte": "23,43,44,50. Tranvía: Parada Antón García Abril.",
-   "descripcion": "Espectáculo de narración oral con interpretación en Lengua de Signos. Presentación del work in progress de la pieza escénica breve. Coloquio con el público tras la presentación del work in progress.",
-   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/fc8718c9cf14f554.jpg",
-   "programa": "",
-   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316685",
-   "tipo": "Exhibición, proyección, competición",
-   "destacado": true,
-   "solo_hoy": true,
-   "infantil": false
-  },
-  {
    "titulo": "La Cosa. Teatro con Cristina Castillo.",
    "hora": "18:30",
    "lugar": "Centro Cívico La Cartuja Baja",
@@ -178,6 +162,22 @@
    "programa": "",
    "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316859",
    "tipo": "Otras",
+   "destacado": true,
+   "solo_hoy": true,
+   "infantil": false
+  },
+  {
+   "titulo": "Imaginarios O-cultos: Creación escénica sobre narración oral, lengua de signos y dramaturgias visuales.Pares sueltos",
+   "hora": "19:00",
+   "lugar": "Centro Cívico Rio Ebro. Edificio Fernández Ordoñez",
+   "direccion": "C/ María Zambrano, 56",
+   "barrio": "Junta Municipal Actur - Rey Fernando",
+   "transporte": "23,43,44,50. Tranvía: Parada Antón García Abril.",
+   "descripcion": "Espectáculo de narración oral con interpretación en Lengua de Signos. Presentación del work in progress de la pieza escénica breve. Coloquio con el público tras la presentación del work in progress.",
+   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/fc8718c9cf14f554.jpg",
+   "programa": "",
+   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316685",
+   "tipo": "Exhibición, proyección, competición",
    "destacado": true,
    "solo_hoy": true,
    "infantil": false
@@ -327,6 +327,22 @@
    "infantil": false
   },
   {
+   "titulo": "Exposición Bibliográfica",
+   "hora": "10:45",
+   "lugar": "Biblioteca Pública Inocencio Ruiz Lasala (Santa Isabel)",
+   "direccion": "del Baile, 6",
+   "barrio": "Junta Municipal Santa Isabel",
+   "transporte": "32, 60, N1",
+   "descripcion": "Diferentes libros y lecturas disponibles durante el mes de noviembre en la Biblioteca Inocencio Ruiz Lasala , en el horario de apertura de la misma. Mañanas de 10:45 a 13:30h Tardes de 16:30 a 20:00h",
+   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/a8a80aea0d5c779d.jpg",
+   "programa": "X Jornadas prevención violencia de género",
+   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316580",
+   "tipo": "Otras",
+   "destacado": true,
+   "solo_hoy": false,
+   "infantil": false
+  },
+  {
    "titulo": "Semana de los derechos de la infancia",
    "hora": "16:00",
    "lugar": "Col. María Auxiliadora",
@@ -338,22 +354,6 @@
    "programa": "",
    "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316721",
    "tipo": "Fiestas",
-   "destacado": true,
-   "solo_hoy": false,
-   "infantil": false
-  },
-  {
-   "titulo": "Exposición Bibliográfica",
-   "hora": "16:30",
-   "lugar": "Biblioteca Pública Inocencio Ruiz Lasala (Santa Isabel)",
-   "direccion": "del Baile, 6",
-   "barrio": "Junta Municipal Santa Isabel",
-   "transporte": "32, 60, N1",
-   "descripcion": "Diferentes libros y lecturas disponibles durante el mes de noviembre en la Biblioteca Inocencio Ruiz Lasala , en el horario de apertura de la misma. Mañanas de 10:45 a 13:30h Tardes de 16:30 a 20:00h",
-   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/a8a80aea0d5c779d.jpg",
-   "programa": "X Jornadas prevención violencia de género",
-   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316580",
-   "tipo": "Otras",
    "destacado": true,
    "solo_hoy": false,
    "infantil": false
