@@ -1,6 +1,6 @@
 {
  "fecha": "2026-11-22",
- "generado": "2026-11-22 01:16",
+ "generado": "2026-11-22 21:17",
  "fuentes": {
   "Ayuntamiento de Zaragoza": 24,
   "Teatro Principal": 1
@@ -37,22 +37,6 @@
    "destacado": true,
    "solo_hoy": true,
    "infantil": false
-  },
-  {
-   "titulo": "CUENTO DE NAVIDAD (encapsulando a Dickens). Coproducción Société de la Mouffette y COMA14.",
-   "hora": "11:30",
-   "lugar": "Centro Cívico Delicias",
-   "direccion": "Avda. Navarra, 54",
-   "barrio": "Junta Municipal Delicias",
-   "transporte": "36, 42, 51, 52",
-   "descripcion": "Hay historias que nos cambian por dentro para siempre. Para esta compañía es el Cuento de Navidad, de Charles Dickens. El señor Scrooge, viejo avaro y gruñón, recibirá la visita inesperada de tres espíritus que lo acompañarán en un viaje revelador a su niñez, su presente y su futuro. Lo que descubrirá le cambiara la vida. Ahora la compañía Société de la Mouffette nos va a contar la historia de Scrooge, para ello han creado un espectáculo multidisciplinar basado en la novela de Dickens. Una constructora de cápsulas cuenta la historia del señor Scrooge desde la mesa de su taller: maquetas, objetos, audiovisual, música y teatro de texto se combinan para crear una experiencia íntima y poderosa. ",
-   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/17ea4a72e0e46fb8.jpg",
-   "programa": "A ras de escena 2026",
-   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/308928",
-   "tipo": "Exhibición, proyección, competición",
-   "destacado": true,
-   "solo_hoy": true,
-   "infantil": true
   },
   {
    "titulo": "Laser tag",
@@ -101,6 +85,22 @@
    "destacado": true,
    "solo_hoy": true,
    "infantil": false
+  },
+  {
+   "titulo": "CUENTO DE NAVIDAD (encapsulando a Dickens). Coproducción Société de la Mouffette y COMA14.",
+   "hora": "13:00",
+   "lugar": "Centro Cívico Delicias",
+   "direccion": "Avda. Navarra, 54",
+   "barrio": "Junta Municipal Delicias",
+   "transporte": "36, 42, 51, 52",
+   "descripcion": "Hay historias que nos cambian por dentro para siempre. Para esta compañía es el Cuento de Navidad, de Charles Dickens. El señor Scrooge, viejo avaro y gruñón, recibirá la visita inesperada de tres espíritus que lo acompañarán en un viaje revelador a su niñez, su presente y su futuro. Lo que descubrirá le cambiara la vida. Ahora la compañía Société de la Mouffette nos va a contar la historia de Scrooge, para ello han creado un espectáculo multidisciplinar basado en la novela de Dickens. Una constructora de cápsulas cuenta la historia del señor Scrooge desde la mesa de su taller: maquetas, objetos, audiovisual, música y teatro de texto se combinan para crear una experiencia íntima y poderosa. ",
+   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/17ea4a72e0e46fb8.jpg",
+   "programa": "A ras de escena 2026",
+   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/308928",
+   "tipo": "Exhibición, proyección, competición",
+   "destacado": true,
+   "solo_hoy": true,
+   "infantil": true
   },
   {
    "titulo": "CEREMONIA DEL TÉ",
@@ -359,22 +359,6 @@
    "infantil": false
   },
   {
-   "titulo": "Largo viaje hacia la noche",
-   "hora": "19:00",
-   "lugar": "Teatro Principal",
-   "direccion": "C/ Coso, 57",
-   "barrio": "Junta Municipal Casco Histórico",
-   "transporte": "21, 28, 29, 38, 39, Tranvía Plaza España",
-   "descripcion": "Un viaje de ida y vuelta El 19 de octubre de 1988 se estrenó en el Teatro Español de Madrid una versión de Largo viaje hacia la noche con un joven Carlos Hipólito interpretando a Edmund y Alberto Closas, Margarita Lozano, José Pedro Carrión y Ana Goya en el reparto. Dirigida por los maestros William Layton y Miguel Narros, aquella producción marcó al joven Ernesto Caballero como espectador y al propio Hipólito que comenzaba su andadura actoral. Tras abordar juntos El Proceso de Kafka vuelven a confluir para transitar este viaje y hacerse algunas preguntas que en el año 88 apenas podían intuir. Les acompaña una compañía comprometida con este diálogo, experta en lenguajes contemporáneos y comp",
-   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/b0ba00902faed0c6.jpg",
-   "programa": "",
-   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/312401",
-   "tipo": "Exhibición, proyección, competición",
-   "destacado": true,
-   "solo_hoy": false,
-   "infantil": false
-  },
-  {
    "titulo": "Zaragoza improvisa 2026",
    "hora": "19:00",
    "lugar": "Teatro del Mercado",
@@ -385,6 +369,22 @@
    "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/7921adabe5fe507f.jpg",
    "programa": "",
    "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/310532",
+   "tipo": "Exhibición, proyección, competición",
+   "destacado": true,
+   "solo_hoy": false,
+   "infantil": false
+  },
+  {
+   "titulo": "Largo viaje hacia la noche",
+   "hora": "19:00",
+   "lugar": "Teatro Principal",
+   "direccion": "C/ Coso, 57",
+   "barrio": "Junta Municipal Casco Histórico",
+   "transporte": "21, 28, 29, 38, 39, Tranvía Plaza España",
+   "descripcion": "Un viaje de ida y vuelta El 19 de octubre de 1988 se estrenó en el Teatro Español de Madrid una versión de Largo viaje hacia la noche con un joven Carlos Hipólito interpretando a Edmund y Alberto Closas, Margarita Lozano, José Pedro Carrión y Ana Goya en el reparto. Dirigida por los maestros William Layton y Miguel Narros, aquella producción marcó al joven Ernesto Caballero como espectador y al propio Hipólito que comenzaba su andadura actoral. Tras abordar juntos El Proceso de Kafka vuelven a confluir para transitar este viaje y hacerse algunas preguntas que en el año 88 apenas podían intuir. Les acompaña una compañía comprometida con este diálogo, experta en lenguajes contemporáneos y comp",
+   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/b0ba00902faed0c6.jpg",
+   "programa": "",
+   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/312401",
    "tipo": "Exhibición, proyección, competición",
    "destacado": true,
    "solo_hoy": false,
