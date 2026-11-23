@@ -1,11 +1,27 @@
 {
  "fecha": "2026-11-23",
- "generado": "2026-11-23 02:33",
+ "generado": "2026-11-23 15:24",
  "fuentes": {
   "Ayuntamiento de Zaragoza": 12,
   "Teatro Principal": 1
  },
  "eventos": [
+  {
+   "titulo": "Teatro Foro Psiare: \"¿Esto es amor? Decídelo tú\" Sesion 23 de noviembre",
+   "hora": "09:00",
+   "lugar": "Salón de actos. Casa de la Mujer",
+   "direccion": "C/ Don Juan de Aragón, 2",
+   "barrio": "Junta Municipal Casco Histórico",
+   "transporte": "21",
+   "descripcion": "El Servicio de Igualdad y Mujer del Ayuntamiento de Zaragoza dentro de la programación de la campaña del #25N \"Día Internacional para la eliminación de la violencia contra la mujer\" ha organizado un teatro foro \"¿Esto es amor? Decídelo tú\" para los centros escolares. La actividad va dirigida a alumnado de bachillerato y ciclos formativos , consiste en una representación teatral en colaboración con Teatro Foro Psiare, para hablar de las relaciones afectivo sexuales de chicos y chicas adolescentes y la influencia en dichas relaciones del uso de las redes sociales y su relación con la violencia contra las mujeres. El Teatro Foro es un formato que permite la participación del alumnado y como rec",
+   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/bb467d55b8e66345.jpg",
+   "programa": "25 de Noviembre",
+   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316512",
+   "tipo": "Charlas (Conferencias y otros)",
+   "destacado": true,
+   "solo_hoy": true,
+   "infantil": false
+  },
   {
    "titulo": "XI Carrera contra la Violencia de Género, Villanueva de Gállego",
    "hora": "11:00",
@@ -34,22 +50,6 @@
    "programa": "",
    "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/315759",
    "tipo": "Visitas Guiadas",
-   "destacado": true,
-   "solo_hoy": true,
-   "infantil": false
-  },
-  {
-   "titulo": "Teatro Foro Psiare: \"¿Esto es amor? Decídelo tú\" Sesion 23 de noviembre",
-   "hora": "11:30",
-   "lugar": "Salón de actos. Casa de la Mujer",
-   "direccion": "C/ Don Juan de Aragón, 2",
-   "barrio": "Junta Municipal Casco Histórico",
-   "transporte": "21",
-   "descripcion": "El Servicio de Igualdad y Mujer del Ayuntamiento de Zaragoza dentro de la programación de la campaña del #25N \"Día Internacional para la eliminación de la violencia contra la mujer\" ha organizado un teatro foro \"¿Esto es amor? Decídelo tú\" para los centros escolares. La actividad va dirigida a alumnado de bachillerato y ciclos formativos , consiste en una representación teatral en colaboración con Teatro Foro Psiare, para hablar de las relaciones afectivo sexuales de chicos y chicas adolescentes y la influencia en dichas relaciones del uso de las redes sociales y su relación con la violencia contra las mujeres. El Teatro Foro es un formato que permite la participación del alumnado y como rec",
-   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/bb467d55b8e66345.jpg",
-   "programa": "25 de Noviembre",
-   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316512",
-   "tipo": "Charlas (Conferencias y otros)",
    "destacado": true,
    "solo_hoy": true,
    "infantil": false
