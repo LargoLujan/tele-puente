@@ -1,6 +1,6 @@
 {
  "fecha": "2026-11-25",
- "generado": "2026-11-25 00:50",
+ "generado": "2026-11-25 15:08",
  "fuentes": {
   "Ayuntamiento de Zaragoza": 20,
   "Teatro Principal": 0
@@ -183,22 +183,6 @@
    "infantil": false
   },
   {
-   "titulo": "Exposición Bibliográfica",
-   "hora": "10:45",
-   "lugar": "Biblioteca Pública Inocencio Ruiz Lasala (Santa Isabel)",
-   "direccion": "del Baile, 6",
-   "barrio": "Junta Municipal Santa Isabel",
-   "transporte": "32, 60, N1",
-   "descripcion": "Diferentes libros y lecturas disponibles durante el mes de noviembre en la Biblioteca Inocencio Ruiz Lasala , en el horario de apertura de la misma. Mañanas de 10:45 a 13:30h Tardes de 16:30 a 20:00h",
-   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/a8a80aea0d5c779d.jpg",
-   "programa": "X Jornadas prevención violencia de género",
-   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316580",
-   "tipo": "Otras",
-   "destacado": true,
-   "solo_hoy": false,
-   "infantil": false
-  },
-  {
    "titulo": "LÍA Y BRUNO EN HARINERA ZGZ",
    "hora": "11:30",
    "lugar": "Harinera ZGZ. Cultura accesible",
@@ -210,6 +194,22 @@
    "programa": "HARINERA ENE-JUN 2026",
    "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/314284",
    "tipo": "Exhibición, proyección, competición",
+   "destacado": true,
+   "solo_hoy": false,
+   "infantil": false
+  },
+  {
+   "titulo": "Exposición Bibliográfica",
+   "hora": "16:30",
+   "lugar": "Biblioteca Pública Inocencio Ruiz Lasala (Santa Isabel)",
+   "direccion": "del Baile, 6",
+   "barrio": "Junta Municipal Santa Isabel",
+   "transporte": "32, 60, N1",
+   "descripcion": "Diferentes libros y lecturas disponibles durante el mes de noviembre en la Biblioteca Inocencio Ruiz Lasala , en el horario de apertura de la misma. Mañanas de 10:45 a 13:30h Tardes de 16:30 a 20:00h",
+   "imagen": "https://largolujan.github.io/tele-puente/agenda/fotos/a8a80aea0d5c779d.jpg",
+   "programa": "X Jornadas prevención violencia de género",
+   "enlace": "https://www.zaragoza.es/sede/servicio/cultura/evento/316580",
+   "tipo": "Otras",
    "destacado": true,
    "solo_hoy": false,
    "infantil": false
